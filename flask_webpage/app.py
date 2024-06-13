@@ -5,7 +5,7 @@ from flask_ngrok import run_with_ngrok
 from auxiliary_functions import pipeline
 
 global_var = {}
-global_var["data_path"] = "/Users/falbanese/Documents/OtherProjects/PolarizationCHP/CollectAndProcessData/Data/articles_3JUN_processed.pickle"
+global_var["data_path"] = "/CollectAndProcessData/Data/articles_processed.pickle"
 global_var["openAI_key"] = ""
 global_var["client"] = None
 
