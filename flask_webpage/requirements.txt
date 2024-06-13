@@ -1,0 +1,9 @@
+Flask==3.0.2
+flask_ngrok==0.0.25
+openai==0.27.8
+scipy==1.12.0
+sentence_transformers==2.4.0
+tqdm==4.65.0
+json==2.0.9
+pickle==4.0
+gunicorn==21.2.0
