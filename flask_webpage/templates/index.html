@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Harmonic Perspectives</title>
+    <style>
+        h1 {text-align: center;}
+        form {text-align: center;}
+        p {text-align: center;}
+        img {text-align: center;}
+        div {text-align: center;}
+    </style>
+</head>
+<body>
+    <!-- img made with: https://www.fontspace.com/category/new-york-times -->
+    <p><img src="/static/HarmonicPerspective.png" alt="Harmonic Perspectives" style="width: 40vw; margin:-5px" class="center"></p>
+    <p style="font-family:'Lucida Console'; font-size:2vw; margin:-2px"> Find diverse perspectives on everyday news.</p>
+    <p><img src="/static/Harmonic_Perspective_Logo.png" alt="Harmonic Perspectives Logo" style="width: 10vw; margin:-5px" class="center"></p>
+    <hr>
+    <p style="font-family:'Lucida Console'; font-size:1vw; margin:-2px"> Wednesday, June 6, 2024 </p>
+    <hr>
+    <p style="margin:-1px">Enter article's url or text:</p>
+    <form action="/" method="post">
+        <textarea id="input" name="input" rows="1.5" cols="50" oninput="updateTextareaSize()"></textarea><br>
+        <button type="submit">Find new Perspectives</button>
+    </form>
+    {% if char_count is not none %}
+        <div style="width: 50vw; margin:0 auto;">
+        <p><b>Input text:</b></p>
+        <p>{{ input_text }}</p>
+        {% if error_message is none %}
+            <p><b>What is {{ media_article_1 }} ({{ media_bias_1 }} bias) saying about it?:</b></p> 
+            <p>{{ summery_article_1 }}</p>
+            <p><a href="{{ url_article_1 }}"> Read full article here </a></p>
+            <p><b>What is {{ media_article_2 }} ({{ media_bias_2 }} bias) saying about it?:</b></p> 
+            <p>{{ summery_article_2 }}</p>
+            <p><a href="{{ url_article_2 }}"> Read full article here </a></p>
+            <p><b>Similaries between the articles:</b></p>
+            <p>{{ similarities }}</p>
+            <p><b>Differences between the articles:</b></p>
+            <p>{{ differences }}</p>
+        {% endif %}
+        {% if error_message is not none %}
+        <p>{{ error_message }}</p>
+        {% endif %}
+        </div>
+    {% endif %}
+    <script>
+        function updateTextareaSize() {
+            var textarea = document.getElementById('input');
+            textarea.style.height = 'auto'; // Reset height to auto
+            textarea.style.height = textarea.scrollHeight + 'px'; // Set height to scroll height
+            return true; // Allow form submission
+        }
+    </script>
+</body>
+</html>
