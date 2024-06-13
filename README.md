@@ -6,6 +6,8 @@ We propose creating a webpage designed to combat toxic polarization by offering 
 
 By presenting contrasting viewpoints, the tool will help users break out of their echo chambers, encouraging them to consider perspectives different from their own. Understanding diverse viewpoints fosters empathy, promoting better communication and understanding among citizens and reducing toxic polarization.
 
+The project is partially founded by [Civic Health Project](https://www.civichealthproject.org/)
+
 Without listening there are no agreements.
 
 Diverse Perspectives: AI-powered tool for empowering readers to consider diverse perspectives.
